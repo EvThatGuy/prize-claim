@@ -1,0 +1,320 @@
+/**
+ * Prize Claim Dashboard Styles
+ * Current UTC Time: 2025-02-19 19:31:52
+ * Current User: EvThatGuy
+ */
+
+/* Dashboard Container */
+.prize-claim-dashboard {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+}
+
+.dashboard-header h2 {
+    margin: 0;
+    color: #2c3338;
+    font-size: 24px;
+}
+
+/* Notification Bell */
+.notification-bell {
+    position: relative;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.notification-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #d63638;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    min-width: 16px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Claim Cards */
+.claim-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    transition: box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.claim-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* W9 Notice */
+.w9-notice {
+    background: #fff4e5;
+    border-left: 4px solid #975810;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Status Labels */
+.claim-status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.claim-status.pending {
+    background: #fff4e5;
+    color: #975810;
+}
+
+.claim-status.processing {
+    background: #e6f6ff;
+    color: #0a558c;
+}
+
+.claim-status.completed {
+    background: #e6f6ef;
+    color: #0a5c3e;
+}
+
+.claim-status.rejected {
+    background: #ffe6e6;
+    color: #c92a2a;
+}
+
+/* Progress Tracker */
+.claim-progress {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    position: relative;
+}
+
+.progress-step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 45px;
+}
+
+.progress-step:last-child {
+    margin-bottom: 0;
+}
+
+.progress-step::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 30px;
+    height: calc(100% + 1.5rem);
+    width: 2px;
+    background: #ddd;
+}
+
+.progress-step:last-child::before {
+    display: none;
+}
+
+.step-icon {
+    position: absolute;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #ddd;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.step-label {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+/* Progress States */
+.progress-step.complete .step-icon {
+    background: #0a5c3e;
+    color: white;
+}
+
+.progress-step.current .step-icon {
+    background: #0a558c;
+    color: white;
+    box-shadow: 0 0 0 4px rgba(10, 85, 140, 0.2);
+}
+
+/* Modal Styles */
+.pc-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 100000;
+}
+
+.pc-modal .modal-content {
+    position: relative;
+    background: white;
+    margin: 5% auto;
+    padding: 2rem;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* Tooltips */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Form Styles */
+.gform_wrapper {
+    margin-top: 1.5rem;
+}
+
+.gform_wrapper input[type="text"],
+.gform_wrapper input[type="email"],
+.gform_wrapper input[type="number"],
+.gform_wrapper select,
+.gform_wrapper textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.gform_wrapper input:focus,
+.gform_wrapper select:focus,
+.gform_wrapper textarea:focus {
+    border-color: #2271b1;
+    outline: none;
+    box-shadow: 0 0 0 1px #2271b1;
+}
+
+/* Loading States */
+.loading {
+    position: relative;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .prize-claim-dashboard {
+        padding: 15px;
+        margin: 1rem auto;
+    }
+
+    .claim-progress {
+        padding: 1rem;
+    }
+
+    .progress-step {
+        padding-left: 35px;
+    }
+
+    .step-icon {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+    }
+
+    .pc-modal .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 1.5rem;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .prize-claim-dashboard {
+        background: #1a1a1a;
+        color: #fff;
+    }
+
+    .claim-card {
+        background: #2c2c2c;
+    }
+
+    .progress-step::before {
+        background: #404040;
+    }
+
+    .gform_wrapper input,
+    .gform_wrapper select,
+    .gform_wrapper textarea {
+        background: #333;
+        color: #fff;
+        border-color: #404040;
+    }
+}

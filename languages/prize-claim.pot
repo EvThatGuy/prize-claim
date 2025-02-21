@@ -1,0 +1,149 @@
+# Copyright (C) 2025 EvThatGuy
+# This file is distributed under the same license as the Prize Claim plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Prize Claim 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/EvThatGuy/prize-claim/issues\n"
+"POT-Creation-Date: 2025-02-20 00:31:14+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2025-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: includes/forms.php:89
+msgid "Enter your first name"
+msgstr ""
+
+#: includes/forms.php:96
+msgid "Enter your last name"
+msgstr ""
+
+#: includes/forms.php:103
+msgid "Enter your email address"
+msgstr ""
+
+#: includes/forms.php:110
+msgid "Enter event name"
+msgstr ""
+
+#: includes/forms.php:117
+msgid "Enter your username/gamertag"
+msgstr ""
+
+#: includes/forms.php:124
+msgid "Tournament Prize"
+msgstr ""
+
+#: includes/forms.php:125
+msgid "Challenge Prize"
+msgstr ""
+
+#: includes/forms.php:131
+msgid "Enter prize amount"
+msgstr ""
+
+#: includes/forms.php:184
+msgid "Enter your bank name"
+msgstr ""
+
+#: includes/forms.php:191
+msgid "Enter the name on the account"
+msgstr ""
+
+#: includes/forms.php:198
+msgid "Enter 9-digit routing number"
+msgstr ""
+
+#: includes/forms.php:199
+msgid "Please enter a valid 9-digit routing number"
+msgstr ""
+
+#: includes/forms.php:206
+msgid "Enter account number"
+msgstr ""
+
+#: includes/forms.php:207
+msgid "Please enter a valid account number (4-17 digits)"
+msgstr ""
+
+#: includes/forms.php:214
+msgid "Checking"
+msgstr ""
+
+#: includes/forms.php:215
+msgid "Savings"
+msgstr ""
+
+#: includes/forms.php:222
+msgid "I confirm that the banking information provided is accurate and authorize direct deposit payments to this account."
+msgstr ""
+
+#: includes/claim-status.php:45
+msgid "Pending"
+msgstr ""
+
+#: includes/claim-status.php:46
+msgid "Approved"
+msgstr ""
+
+#: includes/claim-status.php:47
+msgid "Rejected"
+msgstr ""
+
+#: includes/claim-status.php:48
+msgid "Processing"
+msgstr ""
+
+#: includes/claim-status.php:49
+msgid "Paid"
+msgstr ""
+
+#: includes/notify.php:56
+msgid "Your prize claim has been submitted"
+msgstr ""
+
+#: includes/notify.php:57
+msgid "Your claim is being processed"
+msgstr ""
+
+#: includes/notify.php:58
+msgid "Payment has been scheduled"
+msgstr ""
+
+#: prize-claim.php:156
+msgid "Prize Claims"
+msgstr ""
+
+#: prize-claim.php:157
+msgid "Prize Claim"
+msgstr ""
+
+#: prize-claim.php:158
+msgid "Add New Claim"
+msgstr ""
+
+#: prize-claim.php:159
+msgid "Edit Claim"
+msgstr ""
+
+#. Plugin Name of the plugin
+msgid "Prize Claim"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://github.com/EvThatGuy/prize-claim"
+msgstr ""
+
+#. Description of the plugin
+msgid "Handle prize claim submissions and processing with direct deposit integration"
+msgstr ""
+
+#. Author of the plugin
+msgid "EvThatGuy"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://github.com/EvThatGuy"
+msgstr ""
